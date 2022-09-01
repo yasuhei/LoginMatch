@@ -1,0 +1,175 @@
+<app-navbar></app-navbar>
+<section class="home">
+    <!-- controls autoplay loop -->
+    <div class="video">
+        <video class="video-mob" muted>
+            <source src="/assets/Video_LP_Mobile.mp4" type="video/mp4">
+        </video>
+
+        <video class="video-desk" muted>
+            <source src="/assets/Video_LP_3.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
+
+<section class="about">
+    <div class="about-title">
+        <div class="about-card">
+            <div class="text-l">
+                <h4>sobre nós</h4>
+
+                <h2>Somos a solução<br> para você que busca o melhor profissional para sua obra</h2>
+
+                <p class="text-desk">Te ajudamos a encontrar os melhores arquitetos, designers de interiores, paisagistas, entre outros.</p>
+                <p class="text-mob">Te ajudamos a encontrar <br>os melhores arquitetos, designers<br> de interiores, paisagistas, entre outros.</p>
+
+                <div class="link">
+
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+
+            <div class="img-l">
+                <img src="/assets/annie-spratt-hCb3lIB8L8E-unsplash@2x.png" alt="sala de reunião">
+            </div>
+        </div>
+
+        <div class="about-cards">
+
+            <div class="text-r">
+                <h2>
+                    Experiência única para você que busca praticidade & qualidade
+                </h2>
+
+                <div class="icons">
+                    <div class="icons-img">
+                        <img src="/assets/inventory_black_48dp.svg" alt="icone de prancheta">
+                    </div>
+
+                    <div class="icons-text">
+                        <h5>Profissionais experts</h5>
+                        <p>Arquitetos, designers de interiores, paisagistas, entre outros.</p>
+                    </div>
+
+                </div>
+
+                <div class="icons">
+                    <div class="icons-img">
+                        <img src="/assets/local_grocery_store_black_24dp.svg" alt="icone de carrinho de compras">
+                    </div>
+                    <div class="icons-text">
+                        <h5>Os melhores produtos</h5>
+                        <p>Os profissionais indicam os melhores pisos, porcelanatos, louças, metais e muito mais</p>
+                    </div>
+
+                </div>
+
+                <div class="icons">
+                    <div class="icons-img">
+                        <img src="/assets/star_black_48dp.svg" alt="icone de estrela">
+                    </div>
+                    <div class="icons-text">
+                        <h5>Marcas altamente reconhecidas</h5>
+                        <p>São mais de 45 marcas parceiras, como Portinari, Elisabeth, Roca, Deca.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="img-ls">
+                <img src="/assets/jonathan-borba-TN3dvH3L2dI-unsplash@2x.png
+                    " alt="sala de estar Easy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="projetos">
+    <h2>Projetos em destaque</h2>
+    <p>Inspire-se com projetos únicos & transformadores desenvolvidos por nossos parceiros</p>
+
+    <div class="projetos-img">
+
+        <figure *ngFor="let fig of figures">
+
+            <div class="favorite" (click)="fig.hearts = !fig.hearts">
+                <mat-icon [ngStyle]="{color: fig.hearts === true ? 'red' : ''}">favorite</mat-icon>
+            </div>
+
+            <img [src]="fig.img" alt="Imagem de exemplo" />
+            <div class="bottom">
+
+                <h5>{{fig.name}}</h5>
+                <p>{{fig.type}}</p>
+            </div>
+        </figure>
+
+
+    </div>
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide" *ngFor="let fig of figures">
+                <figure>
+
+                    <div class="favorite" (click)="fig.hearts = !fig.hearts">
+                        <mat-icon [ngStyle]="{color: fig.hearts === true ? 'red' : ''}">favorite</mat-icon>
+                    </div>
+
+                    <img [src]="fig.img" alt="Imagem de exemplo" />
+                    <div class="bottom">
+
+                        <h5>{{fig.name}}</h5>
+                        <p>{{fig.type}}</p>
+                    </div>
+                </figure>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="dot">
+        <div class="dot-1"></div>
+        <div class="dot-2"></div>
+        <div class="dot-3"></div>
+    </div>
+
+
+    <a href="#">Ver mais projetos</a>
+</section>
+
+<section class="match">
+    <div class="container-match">
+        <h2>Encontre o seu Arqmatch perfeito</h2>
+        <p> Consulte nosso buscador de arquitetos para encontrar <br>os melhores
+            profissionais do mercado e garanta a melhor experiência
+            em projetos de arquitetura e engenharia.<br>Sua reforma e construção em boas mãos.
+        </p>
+
+        <a href="">Buscar arquitetos</a>
+    </div>
+    <div class="match-img">
+        <img src="/assets/docusign-BbSBf5uv50A-unsplash@2x.png" alt="Foto de arquiteto">
+    </div>
+
+</section>
+
+<section class="form">
+    <div class="form-text">
+        <h2>Cadastre-se para receber nossa newsletter</h2>
+        <p>E receba conteúdos, dicas e inspirações incríveis!</p>
+    </div>
+
+    <form action="" [formGroup]="formulario">
+        <input type="text" name="name" id="" placeholder="Nome" formControlName="Name">
+        <input type="tel" name="telefone" placeholder="(00) 00000 0000" formControlName="Telefone">
+        <input type="email" name="email" id="" placeholder="nome@email.com" formControlName="Email">
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+</section>
+<app-footer></app-footer>

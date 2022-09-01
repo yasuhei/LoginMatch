@@ -1,0 +1,271 @@
+<div class="body">
+
+    <div class="bottom-content">
+        <div *ngIf="stepper === 0" class="first-step">
+            <div class="steps">
+                <div class="active"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+            </div>
+            <h2>Dados pessoais</h2>
+            <form [formGroup]="_form_data">
+                <div class="grid">
+
+                    <mat-form-field appearance="outline" hideRequiredMarker class="grid_filho_2">
+                        <mat-label>CPF/CNPJ</mat-label>
+                        <input matInput type="text" mask="000.000.000 - 00||00.000.000 / 0000-00" formControlName="cpfCnpj" />
+                    </mat-form-field>
+
+                    <mat-form-field class="grid_filho_2" appearance="outline" hideRequiredMarker>
+                        <mat-label>Nome Completo</mat-label>
+                        <input matInput type="text" formControlName="nomeColaborador" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="grid_filho_1">
+                        <mat-label>Data de nascimento</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="dataNascimento">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" hideRequiredMarker class="grid_filho_1">
+                        <mat-label>Situação cadastral</mat-label>
+                        <input matInput formControlName="situacaoCadastral" type="text" />
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" hideRequiredMarker class="grid_filho_1">
+                        <mat-label>Telefone</mat-label>
+                        <input matInput type="tel" mask="(00) 0000 - 0000 || (00) 00000 - 0000" formControlName="telefone" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="grid_filho_1">
+                        <mat-label>Gênero</mat-label>
+                        <mat-select>
+                            <mat-option [value]="0">Masculino</mat-option>
+                            <mat-option [value]="1">Feminino</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+
+
+                    <div class="buttonBx grid_filho_2">
+                        <button class="buttonBx-green" type="submit" (click)="stepper = 1">Próximo</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <div *ngIf="stepper === 1">
+            <div class="steps">
+                <div class="bullet"></div>
+                <div class="active"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+            </div>
+            <h2>Dados profissionais</h2>
+            <form [formGroup]="_form_register">
+                <div class="grid">
+
+                    <mat-form-field appearance="outline" class="grid_filho_2">
+                        <mat-label>Profissão</mat-label>
+                        <mat-select formControlName="profissao">
+                            <mat-option [value]="0">Front-end</mat-option>
+                            <mat-option [value]="1">Back-end</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field class="grid_filho_2" appearance="outline" hideRequiredMarker>
+                        <mat-label>Outra</mat-label>
+                        <input matInput type="text" formControlName="outra" />
+                    </mat-form-field>
+
+                    <div class="buttonBx grid_filho_2">
+                        <button class="buttonBx-return" type="submit" (click)="return()">Voltar</button>
+
+                        <button class="buttonBx-green" type="submit" (click)="stepper = 2">Próximo</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <div *ngIf="stepper === 2">
+            <div class="steps">
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="active"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+            </div>
+            <h2>Endereço</h2>
+            <form [formGroup]="_form_address">
+                <div class="grid">
+
+                    <mat-form-field class="grid_filho_2" appearance="outline">
+                        <mat-label>Cep</mat-label>
+                        <input matInput type="text" formControlName="cep" (keyup)="returnCep()" (change)="returnCep()" />
+                    </mat-form-field>
+
+                    <mat-form-field class="grid_filho_2" appearance="outline">
+                        <mat-label>Endereço</mat-label>
+                        <input matInput type="text" formControlName="endereco" required />
+                    </mat-form-field>
+
+                    <mat-form-field class="grid_filho_2" appearance="outline">
+                        <mat-label>Bairro</mat-label>
+                        <input matInput type="text" formControlName="bairro" />
+                    </mat-form-field>
+
+                    <mat-form-field class="grid_filho_2" appearance="outline">
+                        <mat-label>Cidade</mat-label>
+                        <input matInput type="text" formControlName="cidade" />
+                    </mat-form-field>
+
+                    <mat-form-field class="grid_filho_2" appearance="outline">
+                        <mat-label>Estado</mat-label>
+                        <input matInput type="text" formControlName="estado" />
+                    </mat-form-field>
+
+                    <div class="buttonBx grid_filho_2">
+                        <button class="buttonBx-return" (click)="return()">Voltar</button>
+
+                        <button class="buttonBx-green" type="submit" (click)="stepper = 3">Próximo</button>
+                        <!-- [disabled]="!_form_address.valid" -->
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <div *ngIf="stepper === 3">
+            <div class="steps">
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="active"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+            </div>
+            <h2>Dados bancários</h2>
+            <form [formGroup]="_form_bank">
+                <div class="grid">
+
+
+
+                    <mat-form-field appearance="outline" class="grid_filho_2">
+                        <mat-label>Tipo de conta</mat-label>
+                        <mat-select formControlName="tipoConta">
+                            <mat-option value="fisica">Fisica</mat-option>
+                            <mat-option value="empresarial">Empresárial</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+
+                    <mat-form-field appearance="outline" class="grid_filho_2">
+                        <mat-label>Forma de pagamento</mat-label>
+                        <mat-select formControlName="formaPagamento">
+                            <mat-option value="boleto">Boleto</mat-option>
+                            <mat-option value="pix">Pix</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+
+
+
+                    <mat-form-field class="grid_filho_2" appearance="outline">
+                        <mat-label>Banco</mat-label>
+                        <input matInput formControlName="banco" [matAutocomplete]="autoFourth" (click)="returnBanc()" placeholder="Digite o código do seu banco" required />
+                        <mat-autocomplete #autoFourth="matAutocomplete" [displayWith]="displayFnFourth">
+                            <mat-option *ngFor="let option of filteredFourthOptions | async" [value]="option.fullName">
+                                {{ option.fullName }}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+
+
+                    <mat-form-field appearance="outline" class="grid_filho_1">
+                        <mat-label>Agência</mat-label>
+                        <input formControlName="AgenciaBancaria" matInput type="text" required autocomplete="off" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="grid_filho_1">
+                        <mat-label>Conta bancária</mat-label>
+                        <input formControlName="ContaBancaria" matInput type="text" required autocomplete="off" />
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="grid_filho_1">
+                        <mat-label>Pix</mat-label>
+                        <mat-select formControlName="PIX">
+                            <mat-option value="CNPJ">CPF/CNPJ</mat-option>
+                            <mat-option value="Email">Email</mat-option>
+                            <mat-option value="Telefone">Telefone</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="grid_filho_1">
+                        <mat-label>Chave pix</mat-label>
+                        <input formControlName="ChavePix" matInput type="text" autocomplete="off" />
+                    </mat-form-field>
+
+
+                    <div class="buttonBx grid_filho_2">
+                        <button class="buttonBx-return" (click)="return()">Voltar</button>
+
+                        <button class="buttonBx-green" type="submit" (click)="stepper = 4">Próximo</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div *ngIf="stepper === 4">
+            <div class="steps">
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="active"></div>
+            </div>
+            <h2>Dados para cadastro</h2>
+            <form [formGroup]="_form_email">
+                <div class="grid">
+
+                    <mat-form-field class="grid_filho_2" appearance="outline">
+                        <mat-label>E-mail</mat-label>
+                        <input matInput type="text" formControlName="email" />
+                    </mat-form-field>
+
+                    <mat-form-field class="grid_filho_2" appearance="outline">
+                        <mat-label>Senha</mat-label>
+                        <input matInput type="text" formControlName="senha" [type]="passwordVisible ? 'text' : 'password'" />
+
+
+                        <mat-icon (click)="passwordVisible = !passwordVisible" matSuffix>{{ passwordVisible ? 'visibility' : 'visibility_off' }}
+                        </mat-icon>
+                    </mat-form-field>
+
+                    <mat-checkbox formControlName="bitAccept">
+                        Estou ciente e aceito as <a href="http://"> regras </a> do programa de fidelidade
+                    </mat-checkbox>
+
+
+
+                    <div class="buttonBx grid_filho_2">
+                        <button class="buttonBx-return" (click)="return()">Voltar</button>
+
+                        <button class="buttonBx-green" type="submit" (click)="submit()">Cadastrar</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+
+    </div>
+
+</div>

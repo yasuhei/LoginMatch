@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="account_circle_white_36dp" transform="translate(0.576 0.576)">
+    <g id="Grupo_3" data-name="Grupo 3" transform="translate(-0.147 -0.147)">
+      <rect id="Retângulo_3" data-name="Retângulo 3" width="28" height="28" transform="translate(-0.43 -0.43)" fill="none"/>
+    </g>
+    <g id="Grupo_5" data-name="Grupo 5" transform="translate(2.64 2.64)">
+      <g id="Grupo_4" data-name="Grupo 4">
+        <path id="Caminho_14" data-name="Caminho 14" d="M12.784,2A10.784,10.784,0,1,0,23.568,12.784,10.781,10.781,0,0,0,12.784,2Zm0,4.718A4.044,4.044,0,1,1,8.74,10.762,4.039,4.039,0,0,1,12.784,6.718Zm0,14.828A8.743,8.743,0,0,1,5.95,18.257a12.157,12.157,0,0,1,13.669,0A8.743,8.743,0,0,1,12.784,21.546Z" transform="translate(-2 -2)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,112 @@
+.body {
+    margin: 0;
+    width: 100%;
+
+    .bottom-content {
+        z-index: 3;
+        text-align: center;
+        width: 100%;
+
+        &>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & .steps {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1em auto 2em auto;
+            gap: 1em;
+
+            & .active {
+                width: 72px;
+                height: 4px;
+                background-color: #364c56;
+            }
+
+            & .bullet {
+                background-color: #364c56;
+                width: 16px;
+                height: 4px;
+            }
+
+            & h2 {
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+
+        & form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 12px;
+
+                .grid_filho_1 {
+                    grid-column: span 1;
+                }
+
+                .grid_filho_2 {
+                    grid-column: span 2;
+                }
+
+            }
+
+            .buttonBx {
+                margin-top: 40px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+
+                .buttonBx-green {
+                    padding: 10px 24px;
+                    background-color: #364c56;
+                    color: #fff;
+                    border: none;
+                    box-shadow: 1px 3px 8px rgba(54, 54, 54, 0.25);
+                    border-radius: 2px;
+                    cursor: pointer;
+                }
+
+                .buttonBx-return {
+                    padding: 10px 24px;
+                    background-color: none;
+                    color: #364c56;
+                    border: none;
+                    box-shadow: 1px 3px 8px rgba(54, 54, 54, 0.25);
+                    border-radius: 2px;
+                    cursor: pointer;
+                }
+            }
+
+            button:hover {
+                filter: brightness(90%);
+
+            }
+        }
+    }
+}
+
+mat-checkbox {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #111512;
+
+    a {
+        text-decoration: revert;
+    }
+
+}

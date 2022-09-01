@@ -1,0 +1,33 @@
+<section>
+    <!-- <nav>
+        <img src="/assets/Logo arqmatch.svg" alt="icone de login">
+    </nav> -->
+
+    <h3>Faça seu cadastro</h3>
+
+    <form [formGroup]="_form">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="user@email.com" required formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Senha</mat-label>
+            <input matInput placeholder="***********" required formControlName="password" [type]="passwordVisible ? 'text' : 'password'">
+            <mat-icon (click)="passwordVisible = !passwordVisible" matSuffix>{{ passwordVisible ? 'visibility' : 'visibility_off' }}
+            </mat-icon>
+
+            <mat-hint>
+                <p (click)="openDialog()">Esqueceu a senha?</p>
+            </mat-hint>
+        </mat-form-field>
+
+
+        <button class="btn" type="submit" (click)="submitLogin()" mat-raised-button [disabled]="!_form.valid">Entrar</button>
+
+        <!-- <button class="btn" type="submit" [disabled]="!_form.valid">Entrar</button> -->
+
+    </form>
+    <p class="acc">Não possui uma conta? <b (click)="openDialogRegister()">Cadastre-se</b></p>
+</section>

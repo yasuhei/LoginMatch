@@ -1,0 +1,228 @@
+$tablet: 900px;
+
+.content {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  padding: 0px 106px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 112px;
+  background-color: #233325ba;
+  transition: all 0.2s ease-in-out;
+
+  img:hover {
+    transform: scale(1.2);
+  }
+
+  .showInfo {
+    display: none;
+  }
+
+  .login {
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    display: block;
+    transition: all 0.2s ease-in-out;
+
+    a {
+      text-decoration: none;
+      text-align: center;
+      font: normal normal 100 17px/18px CocogoosePro;
+      letter-spacing: 0.85px;
+      color: #ffffff;
+      opacity: 1;
+      display: flex;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  .login a:hover {
+    transform: scale(1.1);
+  }
+
+  .links-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 41px;
+    transition: all 0.2s ease-in-out;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .links-center a:hover {
+    transform: scale(1.1);
+  }
+
+  nav.hide {
+    transform: translateY(-100%)
+  }
+
+  @media screen and (max-width: $tablet) {
+    &.expanded {
+      background-color: #233325ba;
+
+      &.content {
+        padding: 0 20px;
+        width: 100%;
+        flex-direction: row-reverse;
+      }
+    }
+
+    .login {
+      display: none;
+    }
+
+    .links-center {
+      display: none;
+    }
+  }
+
+  nav {
+    text-decoration: none;
+    text-align: center;
+    font: normal normal 100 17px/18px CocogoosePro;
+    letter-spacing: 0.85px;
+    color: #ffffff;
+    opacity: 1;
+    display: flex;
+    z-index: 999;
+
+    nav.hide {
+      transform: translateY(-100%)
+    }
+
+    .expand {
+      display: none;
+      cursor: pointer;
+      font-size: 28px;
+
+      @media screen and (max-width: $tablet) {
+        display: initial;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .content {
+    padding: 0 20px;
+    flex-direction: row-reverse;
+
+    .links {
+      width: 66%;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 0px;
+      left: 0;
+      align-items: center;
+      gap: 41px;
+      background-color: #727e75;
+      height: 100vh;
+
+      .links-center-res {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: baseline;
+        padding-top: 61px;
+        padding-left: 36px;
+
+        a {
+          display: flex;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          gap: 25px;
+          text-align: left;
+          font: normal normal bold 10px/48px Gotham;
+          letter-spacing: 0px;
+          color: #ffffff;
+          opacity: 1;
+        }
+      }
+
+      &.hidden {
+        display: none;
+      }
+
+      .showInfo {
+        display: block;
+        width: 100%;
+        height: fit-content;
+        z-index: 99999;
+        position: absolute;
+
+        .show-login {
+          width: 100%;
+          height: 111px;
+          background-color: #3d5b41;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 0 0px 0 32px;
+
+          mat-icon {
+            font-size: 40px;
+            text-align: center;
+            display: contents;
+          }
+
+          .login-detals {
+            padding-left: 16px;
+
+            h4 {
+              margin: 0;
+              text-align: left;
+              font: normal normal bold 0.875rem Arial;
+              letter-spacing: 0px;
+              color: #ffffff;
+              opacity: 1;
+            }
+
+            p {
+              margin: 0;
+              text-align: left;
+              font: normal normal normal 0.625rem Arial;
+              letter-spacing: 0px;
+              color: #ffffff;
+              opacity: 1;
+            }
+          }
+        }
+
+        .sociais {
+          padding-top: 20%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          gap: 35px;
+          padding-left: 40px;
+        }
+      }
+    }
+
+    .links-center {
+      flex-direction: column;
+      width: 260px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

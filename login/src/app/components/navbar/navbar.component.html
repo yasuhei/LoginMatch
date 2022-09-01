@@ -1,0 +1,71 @@
+<header>
+    <div class="content" [ngClass]="{ expanded: !hidden }">
+        <picture>
+            <source media="(max-width: 900px)" srcset="../../../assets/Grupo 7.svg" />
+            <a routerLink=""> <img src="../../../assets/Grupo 7.svg" alt="Logo da arq match"></a>
+        </picture>
+        <nav>
+            <span class="expand material-icons" (click)="hidden = !hidden">menu</span>
+            <div class="links" [ngClass]="{ hidden: hidden }">
+
+
+                <div class="showInfo" (click)="hidden = !hidden">
+                    <div class="show-login">
+                        <mat-icon>account_circle</mat-icon>
+
+                        <div class="login-detals">
+                            <h4>Yasuhei Nakamura</h4>
+                            <p>Campinas-sp</p>
+                        </div>
+                    </div>
+                    <div class="links-center-res">
+                        <a routerLink="">
+                            <mat-icon>dashboard</mat-icon> FEED
+                        </a>
+                        <a routerLink="">
+                            <mat-icon>mail</mat-icon> MENSAGENS
+                        </a>
+                        <a routerLink="">
+                            <mat-icon>notifications</mat-icon> NOTIFICAÇÕES
+                        </a>
+                        <a routerLink="">
+                            <mat-icon>images</mat-icon> PROJETOS
+                        </a>
+                        <a routerLink="">
+                            <mat-icon>videocam</mat-icon> VÍDEOS
+                        </a>
+                        <a routerLink="">
+                            <mat-icon>pin_drop</mat-icon> LUGARES
+                        </a>
+                        <a routerLink="">
+                            <mat-icon>settings</mat-icon> CONFIGURAÇÕES
+                        </a>
+                        <a routerLink="">
+                            <mat-icon>search</mat-icon> BUSCAR
+                        </a>
+
+                    </div>
+
+                    <div class="sociais">
+                        <a href=""> <img src="../../../assets/facebook.svg" alt="facebook"></a>
+                        <a href=""> <img src="../../../assets/instagram.svg" alt="instagram"></a>
+                        <a href=""> <img src="../../../assets/linkedin.svg" alt="linkedin"></a>
+                    </div>
+                </div>
+                <div class="links-center">
+                    <a routerLink="">Home</a>
+                    <a routerLink="Arquitetos">Arquitetos</a>
+                    <a routerLink="Blog">blog</a>
+                    <a routerLink="/club">Club</a>
+                </div>
+            </div>
+        </nav>
+        <nav class="login">
+            <div class="login">
+                <a href="/login" target="_blank"> <img src="../../../assets/account_circle_white_36dp.svg" alt="icone de login">Login</a>
+            </div>
+        </nav>
+    </div>
+
+
+</header>

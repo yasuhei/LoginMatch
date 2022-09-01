@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body,
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../src/fonts/Gotham-Bold.otf") format("opentype"),
+    url("../src/fonts/GothamBold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "GothamBook";
+  src: url("../src/fonts/GothamBook.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "CocogooseLight";
+  src: url("../src/fonts/Cocogoose\ Pro\ Light-trial.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "CocogoosePro";
+  src: url("../src/fonts/Cocogoose\ Pro\ Thin-trial.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "COCOGOOSE";
+  src: url("../src/fonts/Cocogoose\ Pro\ Light-trial.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Colasta";
+  src: url("../src/fonts/Colasta.ttf") format("truetype");
+  font-weight: normal;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+mat-form-field .mat-form-field-outline {
+  color: #364c56 !important;
+}
+
+//  mat-form-field.mat-form-field-invalid {
+//   caret-color: #000!important;
+// }
+
+
+.mat-step-header .mat-step-icon-selected,
+.mat-step-header .mat-step-icon-state-done,
+.mat-step-header .mat-step-icon-state-edit {
+  background-color: #2D392E;
+  color: #fff;
+}
+
+.mat-step-icon {
+  border-radius: 0% !important;
+  height: 4px !important;
+  width: 16px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.mat-step-icon:active {
+  height: 4px !important;
+  width: 72px;
+
+}
+
+.mat-step-icon-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none !important;
+}

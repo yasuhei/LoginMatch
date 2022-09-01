@@ -1,0 +1,1200 @@
+$tablet: 900px;
+.desk,
+.subT-desk,
+.h3-desk {
+  display: block;
+}
+.resp,
+.img-resp,
+.subT-resp,
+.h3-resp,
+.button-mobile {
+  display: none;
+}
+
+.h3-resp-button {
+  display: none;
+}
+
+.background {
+  background: url("../../../assets/FOTO\ BANNER@2x.png") center;
+  background-size: cover;
+  width: 100%;
+  height: -webkit-calc(100vh);
+  min-height: -webkit-fill-available;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  align-items: baseline;
+  padding-left: 160px;
+  padding-bottom: 48px;
+
+  .background-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    flex-direction: column;
+    padding-bottom: 0px;
+
+    h1 {
+      text-align: left;
+      font: normal normal 100 35px CocogoosePro;
+      letter-spacing: 0px;
+      color: #ffffff;
+      opacity: 1;
+      width: 530px;
+      padding-bottom: 21px;
+    }
+
+    p {
+      text-align: left;
+      font: normal normal normal 20px GothamBook;
+      letter-spacing: 0px;
+      color: #ffffff;
+      opacity: 1;
+      margin: 0;
+      background: #8dcc94;
+      padding: 7px 10px;
+    }
+  }
+}
+
+.about {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f2ee;
+  flex-direction: column;
+
+  .about-container {
+    height: 100%;
+    width: 100%;
+    padding-top: 72px;
+
+    .about-title {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      h4 {
+
+        font: normal normal 300 12px CocogooseLight;
+        letter-spacing: 1.39px;
+        color: #1f6427;
+        text-transform: uppercase;
+        opacity: 1;
+      }
+      h2 {
+        text-align: center;
+        font: normal normal 100 40px CocogoosePro;
+        letter-spacing: 0px;
+        color: #223028;
+        opacity: 1;
+      }
+    }
+
+    .about-subtitle {
+      width: 100%;
+      height: 100%;
+      margin: 27px 0px 60px 0px;
+      padding: 0;
+      text-align: center;
+
+      p {
+        text-align: center;
+        letter-spacing: -0.18px;
+        color: #555353;
+        opacity: 1;
+        font: normal normal normal 18px GothamBook;
+
+      }
+
+      .resp{
+        width: 100%;
+        text-align: center;
+        letter-spacing: -0.18px;
+        color: #555353;
+        opacity: 1;
+        
+      }
+    }
+
+    .about-img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 47px;
+      padding: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .buttons {
+    width: 242px;
+    height: 46px;
+    background-color: #36563a;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+
+    a {
+      text-align: center;
+      text-decoration: none;
+      font: normal normal normal 20px Arial;
+      letter-spacing: 0px;
+      color: #ffffff;
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
+  .buttons:hover {
+    background-color: darken(#36563a, 5% );
+  }
+}
+
+.vantagens {
+  width: 100%;
+  height: auto;
+  min-height: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f2ee;
+  flex-direction: column;
+  padding: 71px 106px 0 106px;
+
+  .vantagens-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: initial;
+  }
+
+  .vant-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 34px;
+
+    .text {
+      width: 400px;
+      padding: 0;
+      margin: 0 0 26px 0;
+
+      h2 {
+        width: 100%;
+        text-align: left;
+        font: normal normal 300 40px CocogoosePro;
+        letter-spacing: 0px;
+        color: #223028;
+      }
+    }
+
+    .subT {
+      width: 489px;
+      padding: 0;
+
+      .subT-desk {
+        text-align: left;
+        font: normal normal normal 18px GothamBook;
+        letter-spacing: -0.18px;
+        color: #3b3b3b;
+        opacity: 1;
+      }
+    }
+  }
+
+  .vant-left {
+    width: 74%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
+    padding-top: 0;
+    // gap: 29px;
+    margin-left: 0;
+    padding-left: 76px;
+
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      margin-bottom: 18px;
+      flex-direction: column;
+
+
+      .icon-p {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+        img {
+          width: 16px;
+          height: 16px;
+          margin: 0;
+        }
+        
+      p {
+        width: 100%;
+        margin: 0;
+        text-align: left;
+        font: normal normal normal 22px GothamBook;
+        letter-spacing: -0.14px;
+        color: #3b3b3b;
+        opacity: 1;
+        margin-left: 12px;
+      }
+
+      }
+      
+
+      hr {
+        width: 100%;
+        height: 1px;
+        color: #1f6427;
+        margin-top: 12px;
+
+      }
+    }
+
+  }
+}
+
+.box_green {
+  width: 100%;
+  height: 430px;
+  background-color: #254129;
+  margin-top: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .box-text {
+    width: 920px;
+    height: 86px;
+
+    p {
+      text-align: center;
+      font: normal normal 100 35px CocogoosePro;
+      letter-spacing: 0px;
+      color: #f3f2ee;
+      opacity: 1;
+    }
+  }
+  .box-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 55px;
+    padding-top: 69px;
+    flex-direction: initial;
+    padding-bottom: 0px;
+
+    .box-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      img {
+        margin-bottom: 8px;
+      }
+
+      h3 {
+        text-align: center;
+        font: normal normal 600 22px COCOGOOSE;
+        letter-spacing: 0px;
+        color: #f3f2ee;
+        opacity: 1;
+      }
+
+      .box-text-p {
+        width: 334px;
+
+        p {
+          text-align: center;
+          font: normal normal normal 15px GothamBook;
+          letter-spacing: -0.15px;
+          color: #f3f2ee;
+          opacity: 1;
+          margin: 0;
+        }
+      }
+      .box-text-last {
+        width: 335px;
+        padding-bottom: 0;
+
+        p {
+          text-align: center;
+          font: normal normal normal 15px GothamBook;
+          letter-spacing: -0.15px;
+          color: #f3f2ee;
+          opacity: 1;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.cadastre {
+  width: 100%;
+  height: -webkit-calc(100vh);
+  min-height: -webkit-fill-available;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../../../assets/FORMAS.png") center 300% no-repeat;
+  background-size: cover;
+  background-color: #f3f2ee;
+  padding: 0;
+
+  .cadastre-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    .cadastre-text {
+      width: 504px;
+      height: 65px;
+      padding-top: 175px;
+      padding-bottom: 0;
+
+      .h3-desk {
+        text-align: left;
+        font: normal normal 300 35px/40px CocogoosePro;
+        letter-spacing: 0px;
+        color: #223028;
+        opacity: 1;
+        margin-bottom: 64px;
+        display: block;
+      }
+
+
+      .buttons-desk {
+        width: 242px;
+        height: 42px;
+        background-color: #36563a;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          text-align: center;
+          text-decoration: none;
+          text-align: center;
+          font: normal normal normal 20px Arial;
+          letter-spacing: 0px;
+          color: #ffffff;
+          width: 100%;
+        }
+      }
+
+      .buttons-desk:hover {
+        background-color: darken(#36563a, 5% );
+      }
+    }
+
+    .cadastre-img {
+      width: 524px;
+      height: 532px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.parceiro {
+  width: 100%;
+  height: auto;
+padding: 0 106px;
+background-color: #F3F2EE;
+
+  .parceiro-container {
+    width: 100%;
+    height: 100%;
+
+    min-height: -webkit-fill-available;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 54px 116px 69px 55px;
+    background-color: #f3f2ee;
+    flex-direction: column;
+    background: url("../../../assets/Grupo\ 75@2x.png") center no-repeat;
+    background-size: cover;
+
+    .parceiro-center {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .parceiro-text {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        h3 {
+          text-align: left;
+          font: normal normal 100 30px CocogoosePro;
+         letter-spacing: 0px;
+          color: #ffffff;
+          opacity: 1;
+        }
+
+        .parceiro-p {
+          width: 100%;
+          height: 100%;
+
+          p {
+            text-align: left;
+            font: normal normal normal 18px GothamBook;
+            letter-spacing: 0px;
+            color: #ffffff;
+            opacity: 1;
+            margin: 0;
+          }
+        }
+      }
+
+      .parceiro-icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        margin-left: 0px;
+        padding-top: 0px;
+
+        .parceiro-left {
+          width: 50%;
+          display: flex;
+          text-align: center;
+          gap: 9px;
+          padding-top: 22px;
+
+
+          p {
+            text-align: left;
+            font: normal normal normal 18px/20px GothamBook ;
+            letter-spacing: 0px;
+            color: #ffffff;
+            opacity: 1;
+          }
+
+          .parceiro-left-p {
+            width: 162px;
+          }
+          .parceiro-left-p-sec {
+            width: 179px;
+          }
+          .parceiro-left-p-th {
+            width: 236px;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+.maps {
+  background-color: #F3F2EE;
+  width: 100%;
+  height: 100%;
+  padding: 157px 0px 114px 0px;
+
+
+.parceiro-img {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // padding-left: 34px;
+  flex-direction: initial;
+
+  .img-center {
+    width: 572px;
+    height: 431px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .local {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+      // padding: 131px 102px 0 35px;
+
+
+    .local-text {
+      width: 431px;
+
+      .local-text-p {
+        text-align: left;
+        font: normal normal 300 40px CocogoosePro;
+        letter-spacing: 0px;
+        color: #223028;
+        opacity: 1;
+        padding-bottom: 40px;
+      }
+      .local-sub {
+        width: 263px;
+
+        p {
+          text-align: left;
+          font: normal normal normal 20px GothamBook;
+          letter-spacing: 0px;
+          color: #223028;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+}
+
+@media screen and (max-width: $tablet) {
+  .desk,
+  .img-desk,
+  .subT-desk {
+    display: none ;
+  }
+  .resp,
+  .h3-resp-button{
+    display: block;
+  }
+  // .h3-desk {
+  //   display: none;
+  // }
+
+
+  .background {
+    background: url("../../../assets/FOTO\ BANNER.png")center;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    align-items: center;
+    padding: 0px 20px;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  
+
+    .background-container {
+      min-height: fit-content;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: column;
+      padding-bottom: 78px;
+
+      h1 {
+        text-align: center;
+        font: normal normal 300 22px CocogooseLight;
+        letter-spacing: 0px;
+        color: #ffffff;
+        width:334px;
+        margin-bottom: 0px;
+        margin:0;
+      }
+
+      p {
+        width: 100%;
+        text-align: center;
+        font: normal normal normal 15px GothamBook;
+        letter-spacing: 0px;
+        color: #ffffff;
+        margin: 0;
+        background-color: #8dcc94;
+        padding: 7px 10px;
+      }
+
+      .background-text {
+        width: 100%;
+        background: #8DCC94 0% 0% no-repeat padding-box;
+        opacity: 0.5;
+        text-align: center;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding: 7px 10px;
+      }
+    }
+  }
+  .about {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f2ee;
+    flex-direction: column;
+
+    .about-container {
+      height: 100%;
+      width: 100%;
+      padding-top: 32px;
+
+      .about-title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h4 {
+          font: normal normal 300 12px/16px CocogooseLight;
+          letter-spacing: 1.39px;
+          color: #1f6427;
+          text-transform: uppercase;
+          opacity: 1;
+        }
+        h2 {
+          text-align: center;
+          font: normal normal 300 20px/39px CocogooseLight;
+          letter-spacing: 0px;
+          color: #223028;
+          opacity: 1;
+        }
+      }
+
+      .about-subtitle {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 16px;
+
+        .resp {
+          text-align: center;
+          letter-spacing: -0.15px;
+          color: #555353;
+          opacity: 1;
+          font: normal normal normal 15px GothamBook;
+
+        }
+      }
+
+      .about-img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 23px 0 58px 0;
+
+        .img-resp {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .h3-resp-button {
+        width: 242px;
+        height: 46px;
+        background-color: #36563a;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          text-align: center;
+          text-decoration: none;
+          text-align: center;
+          font: normal normal normal 20px Colasta;
+          letter-spacing: 0px;
+          color: #ffffff;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .vantagens {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f2ee;
+    flex-direction: column;
+    padding: 0;
+
+    .vantagens-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+
+      .vant-right {
+        width: 100%;
+        
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+
+        .text {
+          width: 100%;
+          height: 100%;
+          padding: 56px 42px 0px 33px;
+
+          h2 {
+            width: 100%;
+            text-align: left;
+            font: normal normal 300 30px CocogooseLight;
+            letter-spacing: 0px;
+            color: #223028;
+          }
+        }
+
+        .subT {
+          width: 100%;
+          min-width: -webkit-fill-available;
+          height: 63px;
+          padding: 0px 40px 0px 33px;
+
+          .subT-resp {
+            min-height: -webkit-fill-available;
+            text-align: left;
+            font: normal normal normal 15px GothamBook;
+            letter-spacing: -0.15px;
+            color: #3b3b3b;
+            opacity: 1;
+            display: block;
+          }
+        }
+      }
+
+      .vant-left {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        flex-direction: column;
+        margin-left: 0px;
+        gap: 33px;
+        padding-left: 20px;
+        padding-top: 56px;
+
+
+
+        .icon {
+          display: flex;
+          height: 100%;
+
+          justify-content: center;
+          align-items: center;
+          padding: 0px;
+          margin-bottom: 0px;
+          gap: 0;
+          flex-direction: column;
+
+          .icon-p {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            
+          p {
+            width: 100%;
+            margin: 0;
+            text-align: left;
+            font: normal normal normal 14px GothamBook;
+            letter-spacing: -0.14px;
+            color: #3b3b3b;
+            opacity: 1;
+            margin-left: 12px;
+          }
+
+          }
+
+
+
+          hr {
+          width: 100%;
+          height: 1px;
+          color: #1f6427;
+          margin-top: 12px;
+
+        }
+      }
+
+      }
+
+
+    }
+  }
+
+  .box_green {
+    width: 100%;
+    height: 100%;
+    background-color: #254129;
+    margin-top: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .box-text {
+      width: 310px;
+      padding-top: 56px;
+
+      p {
+        text-align: center;
+        font: normal normal 300 20px CocogooseLight;
+        letter-spacing: 0px;
+        color: #f3f2ee;
+        opacity: 1;
+      }
+    }
+
+    .box-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 0px;
+      padding-top: 77px;
+      padding-bottom: 77px;
+      flex-direction: column;
+
+      .box-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        padding-top: 54px;
+
+  
+
+        h3 {
+          text-align: center;
+          font: normal normal 600 15px Cocogoose;
+          letter-spacing: 0px;
+          color: #f3f2ee;
+          opacity: 1;
+        }
+
+        .box-text-p {
+          width: 248px;
+
+          p {
+            text-align: center;
+            font: normal normal normal 15px GothamBook;
+            letter-spacing: -0.15px;
+            color: #f3f2ee;
+            opacity: 1;
+          }
+        }
+        .box-text-last {
+          width: 262px;
+
+          p {
+            text-align: center;
+            font: normal normal normal 15px/18px GothamBook;
+            letter-spacing: -0.15px;
+            color: #f3f2ee;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .cadastre {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../../../assets/FORMAS.png") center no-repeat;
+    background-size: cover;
+    background-color: #f3f2ee;
+    padding: 61px 0;
+
+    .cadastre-container {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .cadastre-text {
+        width: 100%;
+        height: 100%;
+        padding: 0 20px 71px 20px;
+        text-align: center;
+
+        .h3-resp {
+          // padding: 60px 0 70px 0;
+          text-align: center;
+          font: normal normal 300 20px CocogooseLight;
+          letter-spacing: 0px;
+          color: #223028;
+          opacity: 1;
+          margin-bottom: 0px;
+          width: 100%;
+          display: block;
+        }
+
+        .h3-desk {
+          display: none;
+        }
+        .buttons-desk {
+          display: none;
+        }
+      }
+  
+      .button-mobile {
+        width: 242px;
+        height: 42px;
+        background-color: #36563a;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
+
+        a {
+          text-align: center;
+          text-decoration: none;
+          text-align: center;
+          font: normal normal normal 20px Cocogoose pro;
+          letter-spacing: 0px;
+          color: #ffffff;
+          width: 100%;
+      }
+    }
+      .cadastre-img {
+        width: 242px;
+        height: 42px;
+        background-color: #36563a;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          text-align: center;
+          text-decoration: none;
+          text-align: center;
+          font: normal normal normal 20px/26px Arial;
+          letter-spacing: 0px;
+          color: #ffffff;
+          opacity: 1;
+        }
+      }
+
+      .cadastre-img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 67px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .parceiro {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+    background-color: #f3f2ee;
+    flex-direction: column;
+    background: url("../../../assets/Grupo\ 75@2x.png") center no-repeat;
+    background-size: cover;
+
+    .parceiro-container {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 54px 53px 69px 55px;
+
+
+      .parceiro-center {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+        .parceiro-text {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
+          h3 {
+            text-align: left;
+            font: normal normal 300 20px CocogooseLight;
+            letter-spacing: 0px;
+            color: #ffffff;
+            opacity: 1;
+          }
+
+          .parceiro-p {
+            display: none;
+          }
+
+          p {
+            text-align: left;
+            font: normal normal normal 15px/16px GothamBook;
+            letter-spacing: 0px;
+            color: #ffffff;
+            opacity: 1;
+            margin: 0;
+          }
+        }
+
+        .parceiro-icons {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: baseline;
+          text-align: center;
+          flex-direction: column;
+          margin-left: 0px;
+          padding-top: 71px;
+
+          .parceiro-left {
+            width: 100%;
+            display: flex;
+            text-align: center;
+            gap: 9px;
+            padding-top: 28px;
+
+            p {
+              text-align: left;
+              font: normal normal normal 18px GothamBook;
+              letter-spacing: 0px;
+              color: #ffffff;
+              opacity: 1;
+              margin: 0;
+            }
+
+            .parceiro-left-p {
+              width: 162px;
+            }
+            .parceiro-left-p-sec {
+              width: 179px;
+            }
+            .parceiro-left-p-th {
+              width: 236px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .maps {
+  width: 100%;
+  padding: 0px;
+
+
+  .parceiro-img {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+    flex-direction: column-reverse;
+
+    .img-center {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .local {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 59px 102px 62px 35px;
+
+      .local-text {
+        width: 268px;
+
+        .local-text-p {
+          text-align: left;
+          font: normal normal 300 22px CocogooseLight;
+          letter-spacing: 0px;
+          color: #223028;
+          opacity: 1;
+          padding-bottom: 30px;
+        }
+        .local-sub {
+          width: 263px;
+
+          p {
+            text-align: left;
+            font: normal normal normal 17px GothamBook;
+            letter-spacing: 0px;
+            color: #223028;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+}
